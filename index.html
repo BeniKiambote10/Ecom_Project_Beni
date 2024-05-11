@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BONO</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="image/bono-favicon-white.png">
+    <!--Link to navbar icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--Link The Font From Goodgle-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+
+<nav>
+        <a href="index.html" class="logo"><img src="image/bono-high-resolution-logo-white-transparent.png" alt="#"></a>
+
+        <ul class="navmenu">
+            <li><a class="list" href="index.html">Home</a></li>
+            <li><a class="list" href="products.html">Products</a></li>
+            <li><a class="list" href="contact.html">Contact</a></li>     
+        </ul>
+        <ul class="sidebar">
+            <li><a class="list2" href="index.html">Home</a></li>
+            <li><a class="list2" href="products.html">Products</a></li>
+            <li><a class="list2" href="contact.html">Contact</a></li>     
+        </ul>
+
+        <form class="searchBoxCon">
+            <input type="text" name="searchForm" id="searchBox" placeholder="Search" onkeyup= searchForItem()>
+        </form>
+
+        <div class="nav-icon">
+            <a onclick=showSearchBox() href="#"><i class="fa fa-fw fa-search"></i></a>
+            <a onclick=showSideBar() class="nav_bars" href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
+
+    </nav>
+
+<section class="main-home">
+    <div class="main-text">
+        <h5>Urban Collections</h5>
+        <h1>New Collections</h1>
+        <p>Step up your style game</p>
+
+        <a href="products.html" class="main-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    
+    <div class="down-arrow">
+    <a href="#" aria-label="Click Here"><i class="fa-solid fa-angle-down"></i>
+    </a>
+    </div>
+</section>
+
+<!--Trending Products-->
+<section class="popular-items">
+    <div class="center-text">
+        <h2>Our Trending <span>Products</span></h2>
+    </div>
+
+    <div class="products">
+        <div class="row">
+            <img src="image/model.webp" alt="model">
+            <button>Add To Cart</button>
+            <div class="product-class">
+                <h5 class="color-1">Sale</h5>
+            </div>
+
+
+             <div class="heart-icon">
+               <i class="fa-regular fa-heart"></i>
+             </div>
+
+             <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+             </div>
+             
+             <div class="price">
+                <h4>Can't Knock Me Down Stretch Cargo Jeans - Medium Blue Wash</h4>
+                <p>$35 - $80</p>
+             </div>
+        </div>
+
+
+        <div class="row">
+            <img src="image/model2,png.jpeg"  alt="model2">
+            <button>Add To Cart</button>
+
+            <div class="product-class">
+                <h5 class="color-2">Sale</h5>
+            </div>
+
+             <div class="heart-icon">
+               <i class="fa-regular fa-heart"></i>
+             </div>
+
+             <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+             </div>
+             
+             <div class="price">
+                <h4>Give Me A Break Cargo Carpenter Jeans - Brown</h4>
+                <p>$17.49 - $34.99</p>
+             </div>
+        </div>
+
+        <div class="row">
+            <img src="image/model3.webp"  alt="model3">
+            <button>Add To Cart</button>
+
+            <div class="product-class">
+                <h5 class="color-1">Sale</h5>
+             </div>
+
+             <div class="heart-icon">
+               <i class="fa-regular fa-heart"></i>
+             </div>
+
+             <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+             </div>
+             
+             <div class="price">
+                <h4>Manchester High Rise Flare Jeans - Brown</h4>
+                <p>$14.99 - $29.99</p>
+             </div>
+        </div>
+
+        <div class="row">
+            <img src="image/model4.webp" alt="model4">
+            <button>Add To Cart</button>
+
+            <div class="product-class">
+                <h5 class="color-2">Sale</h5>
+            </div>
+
+             <div class="heart-icon">
+               <i class="fa-regular fa-heart"></i>
+             </div>
+
+             <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+             </div>
+             
+             <div class="price">
+                <h4>Lily High Rise Distressed Cargo Jeans - Olive</h4>
+                <p>$27.99 - $39.99</p>
+             </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Client Review -->
+<section class="client-reviews">
+    <div class="reviews">
+        <h3>Client Review</h3>
+        <img src="image/test2.webp" alt="review">
+
+        <p>These clothes are in such good qualitity 
+            <br>I am so delighted in your clothing! It is absolutely gorgeous... everything I have ordered FITS PERFECTLY...
+            <br>my fiance has told me how beautiful I look in the outfits I have purchased, 
+            <br>as well as receiving many other compliments on the quality of your clothing lines from friends and family!
+        </p>
+
+        <h2>Adreanna M.</h2>
+        <p>CEO Of Spride</p>
+    </div>
+</section>
+
+
+<footer class="foot">
+    <div class="foot-bar">
+        <div class="first-info">
+            <img src="/image/bono-high-resolution-logo-black-transparent-3.png" alt="Logo-footer">
+            <p>BONO@Gmail.com</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="second-info">
+            <a href="#" target="_blank"><h4>Support</h4></a>
+           <a href="#" target="_blank"><p>Contact Us</p></a>
+        </div>
+        
+        <div class="third-info"></div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

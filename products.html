@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BONO</title>
+    <link href="products.css" rel="stylesheet" type="text/css">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="image/bono-favicon-white.png">
+    <!--Link to navbar icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--Link The Font From Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Add meta description -->
+    <meta name="description" content="Explore BONO's stylish and trendy fashion products. Shop now for the latest fashion trends.">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo" aria-label="BONO Homepage"><img src="image/bono-high-resolution-logo-white-transparent.png" alt="BONO Logo"></a>
+
+        <ul class="navmenu">
+            <li><a class="list" href="index.html">Home</a></li>
+            <li><a class="list" href="products.html">Products</a></li>
+            <li><a class="list" href="contact.html">Contact</a></li>     
+        </ul>
+        <ul class="sidebar">
+            <li><a class="list2" href="index.html">Home</a></li>
+            <li><a class="list2" href="products.html">Products</a></li>
+            <li><a class="list2" href="contact.html">Contact</a></li>     
+        </ul>
+
+        <form class="searchBoxCon">
+            <input type="text" name="SearchForm" id="searchBox" placeholder="Search" onkeyup= searchForItem()>
+        </form>
+    
+        <div class="nav-icon">
+            <a onclick=showSearchBox() class="nav_search" href="#" aria-label="Search"><i class="fa fa-fw fa-search"></i></a>
+            <a class= "nav_cart" id="cartAdd" href="#" aria-label="view_cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a  onclick=showSideBar() class= "nav_bars" href="#" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </nav>
+
+    <div class="title1">
+        <h1>New <span>Arrivals</span></h1>
+    </div>
+
+    <div id="product-list" class="products-container"></div>
+
+    <section id="emptyCartSection">
+        <div class="empty-cart-message">
+            <h2>Your cart is empty</h2>
+            <button id="goBackButton">Go back to shopping</button>
+        </div>
+    </section>
+    
+
+    <footer class="foot">
+        <div class="foot-bar">
+            <div class="first-info">
+                <img src="image/bono-high-resolution-logo-black-transparent-3.png" alt="BONO Logo">
+                <p>BONO@Gmail.com</p>
+                <div class="social-icons">
+                    <a href="your-facebook-url" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="your-twitter-url" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="your-instagram-url" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="your-github-url" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="your-linkedin-url" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    
+                </div>
+            </div>
+    
+            <div class="second-info">
+                <a href="#" target="_blank"><h4>Support</h4></a>
+                <a href="#" target="_blank"><p>Contact Us</p></a>
+            </div>
+        </div>
+    </footer>
+    <script src="product.js" defer></script>
+</body>
+</html>
