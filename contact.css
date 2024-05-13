@@ -335,3 +335,8 @@ form{
     }
 
     }
+    @media(min-width:668px){
+        .nav_bar{
+            display:none;
+        }
+    }
