@@ -18,6 +18,7 @@ fetch("product.json")
   })
   .catch(error => console.error('Error fetching products:', error));
 
+  
 // Function to create HTML markup for a product
 //so it can be displayed to the user 
 function createProductElement(product, index) {
@@ -60,7 +61,7 @@ window.addEventListener('load', renderProducts);
 
 // Function for adding items to the cart
 function addToCart() {
-    const size = prompt("What is your size? X-Large, Large, Small, Medium");
+    const size = prompt("What is your size? X-Large, Large, Medium, Small");
     if (size) {
         alert("Added To Your Cart!");
     } else {
@@ -102,3 +103,33 @@ cartAdd.addEventListener('click', function() {
 document.getElementById('goBackButton').addEventListener('click', function() {
     emptyCartSection.style.display = 'none';
 });
+
+
+
+
+
+// Function to search for and filter item
+function searchForItem() {
+   // It gets what the user typed in the search box, removes extra spaces, and makes it all lowercase.
+  const searchText = document.getElementById('searchBox').value.trim().toLowerCase();
+
+// It finds the area where search results will be shown on the webpage
+  const productListContainer = document.getElementById('product-list');
+
+  // It clears any old search results from the area.
+  productListContainer.innerHTML = '';
+
+  // Then, it looks at each product one by one.
+  products.forEach(product => {
+    // For each product, it checks if the typed text matches the product name or description.
+      if (product.name.toLowerCase().includes(searchText) || product.product_description.toLowerCase().includes(searchText)) {
+         // If it's a match, it creates a display for that product.
+          const productElement = createProductElement(product);
+          // Then, it adds this product's display to the area on the webpage.
+          productListContainer.appendChild(productElement);
+      }
+  });
+}
+
+
+

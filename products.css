@@ -252,10 +252,11 @@ nav {
     color: #333;
     font-size: 24px;
     margin-bottom: 20px;
+
 }
 
 #goBackButton {
-    background-color: #007bff;
+    background-color: #7a4623;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -286,11 +287,8 @@ nav {
     
     #searchBox {
         padding: 5px;
-        border: 1px solid #ccc;
-        border-radius: 20px;
-        outline: none;
-        font-size: 8px;
-        width: 150px;
+        font-size: 14px;
+        width: 200px;
     }
     .nav_bars{
         display:none;
@@ -327,9 +325,9 @@ nav {
     
     #searchBox {
         padding: 5px;
-        border-radius: 20px;
+        border-radius: 40px;
         outline: none;
-        font-size: 8px;
+        font-size: 14px;
         width: 130px;
     }
     .logo img{
@@ -341,6 +339,20 @@ nav {
         margin-top:40px;
        
       }
+      .nav_cart{
+        font-size:2px;
+      }
+      .nav_bars{
+        font-size: 2px;
+      }
+      .sidebar img {
+        max-width:100px;
+        height:auto;
+        margin-top:20px;
+        display: flex;
+        width:100vw;
+        
+    }
 
 }
 

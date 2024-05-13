@@ -87,14 +87,24 @@ nav {
     flex-direction:column;
     align-items:center;
     justify-content: flex-start;
+    
 }
 
 .sidebar li {
     width:100%;
+    
 }
 
 .sidebar a {
     width:100%;
+}
+.sidebar img {
+    max-width:120px;
+    height:auto;
+    margin-top:20px;
+    display: flex;
+    width:100vw;
+    
 }
 
 .list2 {
@@ -405,6 +415,7 @@ header.sticky{
         width:7%;
     
       }
+ 
 
 }
 
@@ -451,7 +462,7 @@ header.sticky{
         width:7%;
     }
 
-    .searchBoxCon {
+    /* .searchBoxCon {
         display: none;
         padding: 10px;
     }
@@ -463,10 +474,10 @@ header.sticky{
         outline: none;
         font-size: 12px;
         width: 130px;
-    }
+    } */
 
     .logo img{
-        max-width:50px;
+        max-width:80px;
         height:auto;   
      }
 
@@ -491,6 +502,18 @@ header.sticky{
        display:none;
     
     }
+    .nav_search{
+        display: none;
+    }
+    .sidebar img {
+        max-width:100px;
+        height:auto;
+        margin-top:20px;
+        display: flex;
+        width:100vw;
+        
+    }
+ 
 
     
      
