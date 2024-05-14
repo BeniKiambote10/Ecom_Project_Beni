@@ -56,7 +56,7 @@ function renderProducts() {
   if (products) {
     products.forEach((product, index) => {
       const productElement = createProductElement(product, index);
-      //productElemetn its appended as a child to the productlist which means that each product will be added to the product list container 
+      //productElement its appended as a child to the productlist which means that each product will be added to the product list container 
       productList.appendChild(productElement);
     });
   } else {
@@ -133,8 +133,7 @@ function searchForItem() {
   
   // Filter products based on the search text
   const filteredProducts = products.filter(product => 
-    product.name.toLowerCase().includes(searchText) || 
-    product.product_description.toLowerCase().includes(searchText)
+    product.name.toLowerCase().includes(searchText) || product.product_description.toLowerCase().includes(searchText)
   );
 
   // If no search results, show a message

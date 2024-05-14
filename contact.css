@@ -13,7 +13,7 @@ body {
     display:flex;
     align-items:center;
     justify-content: center;
-    background-color:#ceb9a3;
+    background-color:#f8f8f8;
 }
 
 
@@ -78,46 +78,52 @@ nav {
 }
 
 .sidebar {
-    position:fixed;
-    top:0;
-    right:0;
-    height:100vh;
-    width:260px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 260px;
     z-index: 999;
-    background-color:#d9d8d8a2;
+    background-color: #d9d8d8a2;
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(159, 71, 71, 0.1);
-    display:none;
-    flex-direction:column;
-    align-items:center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
     justify-content: flex-start;
+    text-align: center; /* Center text */
 }
 
 .sidebar li {
-    width:100%;
+    width: 100%;
 }
-
 
 .sidebar a {
-    width:100%;
+    width: 100%;
 }
-  
+.sidebar img {
+    display: block;
+    margin: 0 auto; 
+}
+
 .list2 {
-    font-size:40px;
-    color:black;
+    font-size: 40px;
+    color: black;
 }
+
 
 /*Start Of Form*/
 .container{
-    position:relative;
-    width:100%;
-    max-width:900px;
-    padding:40px;
-    display:flex;
-    gap:80px;
-    border-radius:10px;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    display: flex;
+    gap: 80px;
+    border-radius: 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px black;
+    margin-bottom: 250px; 
 }
 
 .left-form{
@@ -241,6 +247,63 @@ form{
 
 
 
+.foot {
+    background-color: rgb(232, 232, 226);
+    margin-top: auto; 
+    width: 100%;
+    position: fixed; 
+    bottom: 0;
+}
+
+.foot-bar {
+    padding-top: 20px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+    line-height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.first-info img{
+    max-width:150px;
+    height:auto;
+    
+
+}
+
+.social-icons a{
+    color:black;
+    font-size:25px;
+    font-weight:400;
+    padding:7px;    
+}
+.social-icons a:hover{
+    color:red;
+}
+
+.second-info a{ 
+    color:black;
+    font-size:25px;
+    font-weight: 400;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+
+
+
 @media(max-width:768px){
     .container{
         flex-direction:column;
@@ -266,18 +329,9 @@ form{
         justify-content: space-between;
 
     }
+   
 }
-    .visually-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-    }
-
+  
 
 
 @media(max-width:667px){

@@ -20,7 +20,7 @@ function validateContactForm() {
 //// Define pattern to allow only letters and spaces
     const namePattern = /^[a-zA-Z\s]+$/;
     if (!namePattern.test(name) || !namePattern.test(message)) {
-        alert('Name and message should contain only letters.');
+        alert('Name should contain only letters.');
         return false;
     }
 //return true if the form is valid 
@@ -31,5 +31,9 @@ document.querySelector('form').addEventListener('submit', function(event) {
     //if form is not valid, prevents the default form submission 
     if (!validateContactForm()) {
         event.preventDefault();
+
+    }else{
+        alert('Thank you for submitting the fomr')
     }
+    
 });
