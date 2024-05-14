@@ -1,40 +1,26 @@
 
-//make the navbar sticky //
-const header = document.querySelector("nav");
 
-window.addEventListener("scroll", function(){
-    header.classList.toggle("sticky", this.window.scrollY > 0);
-})
-
-
-
-function toggleMenu() {
-    let navMenu = document.querySelector('.navmenu');
-    navMenu.classList.toggle('active'); // Toggle the 'active' class
-}
-
-
-//used dom to get the sidebar used onclick so when it is pushed the sidebar displays flex//
-
+//used dom to get the sidebar used onclick so when it is pushed the sidebar displays flex//\
 function showSideBar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = "flex"
 }
 
-//this function is for showing the search box when the search icon is pushed and making it dissapear again//
 
-// function showSearchBox() {
-//     const searchBox = document.querySelector(".searchBoxCon");
-//     const searchIcon = document.querySelector(".nav_search");
+//function for the down arrow to be clicked and scroll down the page 
+function scrollDown() {
+    //scrollOffset is how much the page will scroll down
+    const scrollOffset = 800; 
 
+    // Calculate the new scroll position
+    const newScrollPosition = window.pageYOffset + scrollOffset;
 
-//     if (searchBox.style.display === "flex") {
-//         searchBox.style.display = "none";
-//         searchIcon.style.display = "flex"; 
-//     } else {
-//         searchBox.style.display = "flex";
-//         searchIcon.style.display = "none"; 
-//     }
-// }
+    // To figure out where to scroll the page, we take how much it's already scrolled and add how much more we want it to scroll.
+    window.scrollTo({
+        top: newScrollPosition,
+        behavior: 'smooth' 
+    });
+}
+
 
 

@@ -1,30 +1,35 @@
-// Initialize products variable
+// Initialize products variable with an empty array which will store the product data fetched from the json file 
 let products =[];
 
-// Fetch product data from product.json
+// this code block fetches data from  the file named product.json use API fetch 
 fetch("product.json")
   .then(res => {
-    // Checks if the response is successful
     if (!res.ok) {
       throw new Error('Network response was not ok');
     }
     return res.json();
   })
+
+//once the data is retrieved the fetched data is assigned to a variable call products
+//.then calls renderProducts function to display the items on the page  
+//If there's any error during the fetch process, it catches the error and logs it to the console.
   .then(data => {
-    // Assign the fetched product data to the products variable
     products = data;
-    // Call the renderProducts function to render the products on the page
+   
     renderProducts();
   })
   .catch(error => console.error('Error fetching products:', error));
 
-  
-// Function to create HTML markup for a product
-//so it can be displayed to the user 
+
+//create a div element for each product 
+//add a class to the productElement AKA div elememnt <div product-item> + index + 1
 function createProductElement(product, index) {
   const productElement = document.createElement('div');
   productElement.classList.add('product-item' + (index + 1));
   
+
+  //Now within that div element/ ProductElement I want to create a inner html to display it to the user 
+  //and return the product element which is the Div with the inner HTML included 
   productElement.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name} <i onclick="heartFill()" id="hearty" class="fa-regular fa-heart"></i> </h3>
@@ -36,15 +41,22 @@ function createProductElement(product, index) {
   return productElement;
 }
 
+
+
+
 // Function to render products on the page
 //render is showing data so that it can be displayed 
 function renderProducts() {
   const productList = document.getElementById('product-list');
   
   // Check if products is defined
+  //if the conditional is true the forEach method iterates over each element 
+  //for each product in the array the forEach method executes the provided function  AKA renderProducts passing the current products and its index 
+  //array as arguments 
   if (products) {
     products.forEach((product, index) => {
       const productElement = createProductElement(product, index);
+      //productElemetn its appended as a child to the productlist which means that each product will be added to the product list container 
       productList.appendChild(productElement);
     });
   } else {
@@ -108,28 +120,37 @@ document.getElementById('goBackButton').addEventListener('click', function() {
 
 
 
-// Function to search for and filter item
+// Function to search for and filter items
 function searchForItem() {
-   // It gets what the user typed in the search box, removes extra spaces, and makes it all lowercase.
+  // Get what the user typed and make it lowercase
   const searchText = document.getElementById('searchBox').value.trim().toLowerCase();
-
-// It finds the area where search results will be shown on the webpage
+  
+  // Find where search results will show
   const productListContainer = document.getElementById('product-list');
-
-  // It clears any old search results from the area.
+  
+  // Clear any old search results
   productListContainer.innerHTML = '';
+  
+  // Filter products based on the search text
+  const filteredProducts = products.filter(product => 
+    product.name.toLowerCase().includes(searchText) || 
+    product.product_description.toLowerCase().includes(searchText)
+  );
 
-  // Then, it looks at each product one by one.
-  products.forEach(product => {
-    // For each product, it checks if the typed text matches the product name or description.
-      if (product.name.toLowerCase().includes(searchText) || product.product_description.toLowerCase().includes(searchText)) {
-         // If it's a match, it creates a display for that product.
-          const productElement = createProductElement(product);
-          // Then, it adds this product's display to the area on the webpage.
-          productListContainer.appendChild(productElement);
-      }
-  });
+  // If no search results, show a message
+  if (filteredProducts.length === 0) {
+    const noResultsMessage = document.createElement('p');
+    noResultsMessage.textContent = 'No results found.';
+    productListContainer.appendChild(noResultsMessage);
+  } else {
+    // Otherwise, display the filtered products
+    filteredProducts.forEach(product => {
+      const productElement = createProductElement(product);
+      productListContainer.appendChild(productElement);
+    });
+  }
 }
+
 
 
 
