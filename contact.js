@@ -33,7 +33,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault();
 
     }else{
-        alert('Thank you for submitting the fomr')
+        alert('Thank you for submitting the form')
     }
     
 });
