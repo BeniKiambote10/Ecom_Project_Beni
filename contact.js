@@ -17,10 +17,11 @@ function validateContactForm() {
         alert('Please enter your email.');
         return false;
     }
-//// Define pattern to allow only letters and spaces
+//// Define pattern to allow only letters and spaces using a regular expression consturctor
+//the test method checks if the name or message contains only letter
     const namePattern = /^[a-zA-Z\s]+$/;
     if (!namePattern.test(name) || !namePattern.test(message)) {
-        alert('Name should contain only letters.');
+        alert('Name and message should contain only letters.');
         return false;
     }
 //return true if the form is valid 

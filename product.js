@@ -132,13 +132,14 @@ function searchForItem() {
   productListContainer.innerHTML = '';
   
   // Filter products based on the search text
+  //product name and peoduct descripton has to match the users input 
   const filteredProducts = products.filter(product => 
     product.name.toLowerCase().includes(searchText) || product.product_description.toLowerCase().includes(searchText)
   );
 
   // If no search results, show a message
   if (filteredProducts.length === 0) {
-    const noResultsMessage = document.createElement('p');
+    const noResultsMessage = document.createElement('p');//output <p> "No Results  Found"</  
     noResultsMessage.textContent = 'No results found.';
     productListContainer.appendChild(noResultsMessage);
   } else {

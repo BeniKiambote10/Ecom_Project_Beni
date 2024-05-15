@@ -10,7 +10,7 @@ function showSideBar(){
 //function for the down arrow to be clicked and scroll down the page 
 function scrollDown() {
     //scrollOffset is how much the page will scroll down
-    const scrollOffset = 1250; 
+    const scrollOffset = 800; 
 
     // Calculate the new scroll position
     const newScrollPosition = window.pageYOffset + scrollOffset;
